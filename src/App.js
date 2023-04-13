@@ -1,10 +1,9 @@
 import TextBox from "./TextBox";
 import Input from "./Input";
-import { useState, useRef } from "react";
+import { useInput } from "./useInput";
 
 function App() {
-  const [text, setText] = useState("");
-  const inputRef = useRef();
+  const [text, setText, inputRef] = useInput("");
 
   return (
     <div className="App" style={{ display: "flex", gap: "10px" }}>
