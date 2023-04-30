@@ -53,3 +53,15 @@ Hook은 리액트의 함수 컴포넌트에서 사용되며, 컴포넌트의 상
 
 - 요청이 성공인지 실패인지 여부
 - 원하는 값이 맞는지 아닌지 여부
+
+# async, await (4.30)
+
+- Promise를 편하게 쓸 수 있는 문법
+- async : Promise를 반환한다.
+- await : Promise가 처리 될때까지 기다렸다가 그 이후에 결과를 반환한다.
+
+# 전역 상태관리 (4.30)
+
+- Context API
+- Redux
+- Recoil
