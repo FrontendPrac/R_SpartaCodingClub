@@ -65,3 +65,12 @@ Hook은 리액트의 함수 컴포넌트에서 사용되며, 컴포넌트의 상
 - Context API
 - Redux
 - Recoil
+
+# Context API (5.4)
+
+- React 내장 전역 상태관리 방법이다.
+- 스토어를 여러개 만들어야 하기 때문에 관리하기 어렵다.
+- 사용방법
+  1. store 생성 : createContext
+  2. context API 적용 : Provider
+  3. store 구독 : Consumer, useContext
