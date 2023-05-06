@@ -12,7 +12,7 @@ export const changeName = (name) => {
 //reducer
 export default function myselfReducer(state = initial_state, action = {}) {
   switch (action.type) {
-    case "myself/CHANGE_NAME": {
+    case CHANGE_NAME: {
       return { ...state, name: action.name };
     }
     default:
