@@ -1,26 +1,18 @@
-import { createContext, useContext, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { changeName } from "./redux/modules/myself";
 
 function App() {
-  // context API
-  const [name, setName] = useState("kidongg");
-  const MyStore = createContext();
+  // store 가져오기
+  const store = useSelector((state) => state);
+  console.log("store.myself: ", store.myself);
 
-  // useContext component
-  const MyStoreConsumer = () => {
-    const { name, setName } = useContext(MyStore);
-    return (
-      <>
-        <h2>{name}</h2>
-        <button onClick={() => setName("기동")}>버튼</button>
-      </>
-    );
-  };
+  // dispatch 가져오기
+  const dispatch = useDispatch(changeName("리기동"));
 
   return (
     <>
-      <MyStore.Provider value={{ name: name, setName: setName }}>
-        <MyStoreConsumer />
-      </MyStore.Provider>
+      <p>이름 : {store.myself.name}</p>
+      <button onClick={() => dispatch}>이름 바꾸기</button>
     </>
   );
 }

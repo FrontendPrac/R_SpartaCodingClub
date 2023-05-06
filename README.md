@@ -69,8 +69,25 @@ Hook은 리액트의 함수 컴포넌트에서 사용되며, 컴포넌트의 상
 # Context API (5.4)
 
 - React 내장 전역 상태관리 방법
-- 스토어를 여러개 만들어야 하기 때문에 관리하기 어렵다.
+- 데이터 변경이 잦지 않은 경우에 사용이 적합하다.
+- 데이터의 규모가 있을때 스토어를 여러개 만들어야 하기 때문에 관리하기 어렵다.
 - 사용방법
   1. store 생성 : createContext
   2. context API 적용 : Provider
   3. store 구독 : Consumer, useContext
+
+# Redux (5.6)
+
+- `yarn add redux react-redux`
+- 상태관리 흐름
+  1. redux store를 component에 연결
+  2. component에서 상태 변화에 필요한 action을 호출
+  3. reducer를 통해 새로운 상태값 생성
+  4. 새로운 상태값을 store에 저장
+  5. 새로운 상태 값을 component에서 사용
+- Ducks 구조 : action type, action creator, initial state, reducer가 한 파일에 들어있음
+- Provider : `<Provider store={store}>` 감싸기
+- rootReducer : 모듈 안 reducer 합치기
+- Redux Hook
+  1. 데이터 구독 : `useSelector`
+  2. 데이터 변경 : `useDispatch`
