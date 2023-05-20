@@ -87,17 +87,32 @@ Hook은 리액트의 함수 컴포넌트에서 사용되며, 컴포넌트의 상
   5. 새로운 상태 값을 component에서 사용
 - Ducks 구조 : action type, action creator, initial state, reducer가 한 파일에 들어있음
 - 필수 개념
-  1. Provider : `<Provider store={store}>` 감싸기
-  2. rootReducer : 모듈 안 reducer 합치기
-  3. `createStore`, `combineReducers`
+  1. Provider : 루트 디렉토리 `<Provider store={store}>` 감싸기
+- 필수 메소드
+  1. `combineReducers` : 리듀서 합치기
+  2. `createStore` : 스토어 생성
 - Redux Hook
-  1. 데이터 구독 : `useSelector`
-  2. 데이터 변경 : `useDispatch`
+  1. `useSelector` : 데이터 구독
+  2. `useDispatch` : 데이터 변경
 
 # Redux Toolkit (5.20)
 
 - 배경 : redux의 보일러 플레이트를 줄이기 위해 등장
 - 필수 개념
   1. slice : action type, action creator, initial state, reducer를 묶어서 관리하는 역할
-  2. `createSlice`, `configureStore`
+- 필수 메소드
+  1. `createSlice` : 슬라이스 생성
+  2. `configureStore` : 스토어 생성
 - `yarn add @reduxjs/toolkit`
+
+# react-router-dom (5.20) - v6
+
+- `yarn add react-router-dom`
+- 필수 개념
+  1. BrowserRouter : 루트 디렉토리 `<BrowserRouter>` 감싸기
+  2. Routes, Route : `<Routes><Route path="/" element={<Home />} /></Routes>`
+  3. 정적 라우팅 : `<Route path="/" element={<Home />} />`
+  4. 동적 라우팅 : `<Route path="/myself/:index" element={<Myself />} />`
+- 필수 메소드
+  1. `useParams` : URL params 가져오기
+  2. `useNavigate` : 페이지 이동

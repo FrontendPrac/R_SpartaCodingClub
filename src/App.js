@@ -1,23 +1,15 @@
-import { useSelector, useDispatch } from "react-redux";
-// import { changeName } from "./redux/modules/myself";
-import { changeName } from "./redux/modules/myselfSlice";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Myself from "./pages/Myself";
 
 function App() {
-  // store 가져오기
-  const store = useSelector((state) => state);
-  console.log("store.myself: ", store.myself);
-
-  // dispatch 가져오기
-  const dispatch = useDispatch();
-
   return (
-    <>
-      <p>이름 : {store.myself.name}</p>
-      <p>나이 : {store.myself.age}</p>
-      <button onClick={() => dispatch(changeName("리기동"))}>
-        이름 바꾸기
-      </button>
-    </>
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<Home />} /> {/* 라우팅 */}
+        <Route path="/myself/:index" element={<Myself />} /> {/* 동적 라우팅 */}
+      </Routes>
+    </div>
   );
 }
 
