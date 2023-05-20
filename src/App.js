@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
-import { changeName } from "./redux/modules/myself";
+// import { changeName } from "./redux/modules/myself";
+import { changeName } from "./redux/modules/myselfSlice";
 
 function App() {
   // store 가져오기
@@ -12,6 +13,7 @@ function App() {
   return (
     <>
       <p>이름 : {store.myself.name}</p>
+      <p>나이 : {store.myself.age}</p>
       <button onClick={() => dispatch(changeName("리기동"))}>
         이름 바꾸기
       </button>

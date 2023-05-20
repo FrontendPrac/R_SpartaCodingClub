@@ -89,6 +89,15 @@ Hook은 리액트의 함수 컴포넌트에서 사용되며, 컴포넌트의 상
 - 필수 개념
   1. Provider : `<Provider store={store}>` 감싸기
   2. rootReducer : 모듈 안 reducer 합치기
+  3. `createStore`, `combineReducers`
 - Redux Hook
   1. 데이터 구독 : `useSelector`
   2. 데이터 변경 : `useDispatch`
+
+# Redux Toolkit (5.20)
+
+- 배경 : redux의 보일러 플레이트를 줄이기 위해 등장
+- 필수 개념
+  1. slice : action type, action creator, initial state, reducer를 묶어서 관리하는 역할
+  2. `createSlice`, `configureStore`
+- `yarn add @reduxjs/toolkit`
