@@ -116,3 +116,12 @@ Hook은 리액트의 함수 컴포넌트에서 사용되며, 컴포넌트의 상
 - 필수 메소드
   1. `useParams` : URL params 가져오기
   2. `useNavigate` : 페이지 이동
+
+# 2주차 숙제 (5.20)
+
+- toolkit은 immer라는 불변성 유지 패키지를 내장하고 있다. 그래서 reducer에서 state를 변경하고 할때 스프레드 문법을 통한 불변성을 유지를 할 필요가 없다.
+
+  - redux : `state.listTIL = [...state.listTIL, addData]`
+  - reduxToolkit : `state.listTIL.push(action.payload);`
+
+- navigate(-1) : 뒤로 가기

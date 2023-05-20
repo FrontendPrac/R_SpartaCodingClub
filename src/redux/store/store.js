@@ -1,10 +1,12 @@
 //! 리덕스 툴킷
 import { configureStore } from "@reduxjs/toolkit";
-import myselfReducer from "./modules/myselfSlice";
+import myselfReducer from "../modules/myselfSlice";
+import tilReducer from "../modules/tilSlice";
 
 const store = configureStore({
   reducer: {
     myself: myselfReducer,
+    til: tilReducer,
   },
 });
 
