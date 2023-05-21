@@ -1,18 +1,18 @@
 # XMLHttpRequest (5.21)
 
-- 개념 : 클라이언트로와 서버가 비동기 통신을 하기 위해 사용하는 객체
+- 개념 : 클라이언트로-서버가 비동기 통신을 하기 위해 사용하는 객체
 - 사용방법
   1. `const xhr = new XMLHttpRequest()` : XMLHTTPRequest 객체 생성
   2. `xhr.open("GET", "http://localhost:4000/sleep-time")` : 요청 만들기
   3. `xhr.send()` : 요청 보내기
-  4. 응답 받기 - 이벤트 리스너
+  4. 응답 받기 (이벤트 리스너)
   - `xhr.onreadystatechange` : `XMLHttpRequest.readyState` 가 바뀔 때마다 콜백 함수를 실행
     - `XMLHttpRequest.readyState` : 0 - 객체 생성 / 1 - 요청 만들기 / 2 - 요청 보내기 / 3 - 응답 기다림 / 4 - 응답 완료
   - `xhr.onload` : 서버 응답이 완료 될때 콜백 함수를 실행
 
 # Postman, REST API, mock API, json-server (5.21)
 
-- Postman : API 개발 및 테스트 서비스이다. API 요청 및 응답 테스트, API 문서화를 지원한다.
+- Postman : API 요청 및 응답 테스트, API 문서화를 지원하는 서비스
 - REST API : HTTP를 사용하는 클라이언트와 서버 사이의 통신 방식
   - 구성
     1. 자원 : URI
