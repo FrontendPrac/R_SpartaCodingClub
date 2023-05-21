@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Myself from "./pages/Myself";
 import WriteTIL from "./pages/WriteTIL";
 import { useState } from "react";
+import Sleeptime from "./pages/Sleeptime";
 
 function App() {
   const [listTIL, setListTIL] = useState([]);
@@ -15,6 +16,7 @@ function App() {
           element={<WriteTIL listTIL={listTIL} setListTIL={setListTIL} />}
         />{" "}
         {/* 라우팅 */}
+        <Route path="/sleeptime" element={<Sleeptime />} /> {/* 라우팅 */}
         <Route path="/myself/:index" element={<Myself />} /> {/* 동적 라우팅 */}
       </Routes>
     </div>
