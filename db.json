@@ -19,6 +19,31 @@
       "id": 3,
       "day": "목",
       "sleepTime": "10:00"
+    },
+    {
+      "day": "금",
+      "sleepTime": "10:00",
+      "id": 4
+    },
+    {
+      "days": "토",
+      "sleepTime": "10:00",
+      "id": 5
+    },
+    {
+      "days": "토",
+      "sleepTime": "10:00",
+      "id": 6
+    },
+    {
+      "days": "토",
+      "sleepTime": "10:00",
+      "id": 7
+    },
+    {
+      "days": "토",
+      "sleepTime": "10:00",
+      "id": 8
     }
   ]
 }

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const Sleeptime = () => {
+const XMLhttp = () => {
   useEffect(() => {
     const xhr = new XMLHttpRequest();
     xhr.open("GET", "http://localhost:4000/sleep-time");
@@ -22,7 +22,7 @@ const Sleeptime = () => {
     };
   });
 
-  return <div>Sleeptime</div>;
+  return <div>XMLhttp</div>;
 };
 
-export default Sleeptime;
+export default XMLhttp;

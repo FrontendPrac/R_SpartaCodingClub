@@ -3,20 +3,23 @@ import Home from "./pages/Home";
 import Myself from "./pages/Myself";
 import WriteTIL from "./pages/WriteTIL";
 import { useState } from "react";
-import Sleeptime from "./pages/Sleeptime";
+import XMLhttp from "./pages/XMLhttps";
+import Fetch from "./pages/Fetch";
+import Axios from "./pages/Axios";
 
 function App() {
   const [listTIL, setListTIL] = useState([]);
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Home listTIL={listTIL} />} /> {/* 라우팅 */}
+        <Route path="/" element={<Home listTIL={listTIL} />} />
         <Route
           path="/write"
           element={<WriteTIL listTIL={listTIL} setListTIL={setListTIL} />}
-        />{" "}
-        {/* 라우팅 */}
-        <Route path="/sleeptime" element={<Sleeptime />} /> {/* 라우팅 */}
+        />
+        <Route path="/xmlhttp" element={<XMLhttp />} />
+        <Route path="/fetch" element={<Fetch />} />
+        <Route path="/axios" element={<Axios />} />
         <Route path="/myself/:index" element={<Myself />} /> {/* 동적 라우팅 */}
       </Routes>
     </div>

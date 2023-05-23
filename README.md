@@ -1,3 +1,19 @@
+# Axios (5.24)
+
+- `yarn add axios`
+- `axios({options})`
+- `axios.get(url)`
+- `axios.post(url, data)`
+- Promis 기반 HTTP 통신 기술
+- json 직렬화, 역직렬화 과정이 내장되어있다.
+- 인터셉터 : 요청과 응답이 실행되기 전에 특정 코드를 실행하는 기능이다. 요청과 응답이 실행되기 전에 가로챈다는 의미이다.
+
+# Fetch (5.24)
+
+- `const promise = fetch(url, [options])`
+- Promis 기반 HTTP 통신 기술
+- json 직렬화, 역직렬화 과정이 필요하다.
+
 # XMLHttpRequest (5.21)
 
 - 개념 : 클라이언트로-서버가 비동기 통신을 하기 위해 사용하는 객체
