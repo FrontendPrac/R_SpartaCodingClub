@@ -1,3 +1,7 @@
+# Request API (5.25)
+
+- 터미널 명령어 설정(package.json) `"scripts : {"server-start" : "json-server --watch db.json --port 4000"}"`
+
 # Axios (5.24)
 
 - `yarn add axios`
