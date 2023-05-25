@@ -17,6 +17,7 @@
 # XMLHttpRequest (5.21)
 
 - 개념 : 클라이언트로-서버가 비동기 통신을 하기 위해 사용하는 객체
+- json 직렬화, 역직렬화 과정이 필요하다.
 - 사용방법
   1. `const xhr = new XMLHttpRequest()` : XMLHTTPRequest 객체 생성
   2. `xhr.open("GET", "http://localhost:4000/sleep-time")` : 요청 만들기
