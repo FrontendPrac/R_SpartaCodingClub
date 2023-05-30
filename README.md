@@ -1,3 +1,22 @@
+# 토큰 기반 인증 (5.30)
+
+- OAuth2.0 (Open Authentication)
+  - 개념 : 외부서비스의 인증 및 권한 부여를 관리하는 인증 방식
+  - 동작 방식
+    1. 클라이언트가 로그인을 하면 서버가 access_token을 준다.
+    2. 클라이언트는 access_token을 이용해서 API 요청을 한다.
+    3. 서버는 API 요청을 받고, access_token을 가지고 있나 확인해서 결과를 클라이언트에 보내준다.
+- JWT (Json Web Token)
+  - 개념 : 데이터가 JSON 형태로 이루어져 있는 토큰
+  - 내용
+    - header : 토큰 타입과 암호화 방식 정보
+    - payload : 필요한 정보
+    - signature : 서명 정보
+  - 동작 방식
+    1. 클라이언트가 로그인을 하면 서버가 secret key를 가지고 access_token을 발급하고 클라이언트에 전달한다.
+    2. 클라이언트는 Authorization header에 JWT를 담아 API 요청을 한다.
+    3. 서버는 JWT 요청을 확인하고 payload에서 정보를 확인한 후 응답을 보낸다.
+
 # Polling (5.28)
 
 - 필요 : HTTP로 실시간성 서비스를 만들때
