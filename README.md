@@ -1,3 +1,23 @@
+# 웹 저장소 (6.3)
+
+- 쿠키
+
+  - 저장 : `document.cookie = "accessToken=123"`
+  - 불러오기 : `document.cookie`
+  - 삭제 / 만료일 설정 :
+
+    `const date = new Date("2023-03-10").toUTCString()`
+    `document.cookie = "accessToken=123; expires="+ date +";"`
+
+- 세션 스토리지
+  - 저장 : `sessionStorage.setItem("accessToken", "123")`
+  - 불러오기 : `sessionStorage.getItem("accessToken")`
+  - 삭제 : `sessionStorage.removeItem("accessToken")`
+- 로컬 스토리지
+  - 저장 : `localStorage.setItem("accessToken", "123")`
+  - 불러오기 : `localStorage.getItem("accessToken")`
+  - 삭제 :`localStorage.removeItem("accessToken")`
+
 # 토큰 기반 인증 (5.30)
 
 - OAuth2.0 (Open Authentication)
