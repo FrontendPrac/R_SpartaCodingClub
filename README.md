@@ -1,3 +1,15 @@
+# Firebase Authentication 설정
+
+- Firebase란? BAAS(Backend as a service), 서버리스 서비스
+- 사용방법
+
+  1. 프로젝트 추가
+  2. 앱 생성
+  3. Authentication 시작 및 설정
+  4. 프로젝트 연결 및 설정
+
+     `yarn add firebase`
+
 # 웹 저장소 (6.3)
 
 - 쿠키
