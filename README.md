@@ -1,4 +1,14 @@
-# Firebase Authentication 설정
+# Firebase (6.5)
+
+- Authentication
+  - 랜덤으로 id값을 할당한다.
+  - 회원가입 : `createUserWithEmailAndPassword`
+- Firestore
+  - id를 지정하지 않으면 랜덤으로 id값을 할당한다.
+  - `collection`
+  - 추가 : `addDoc`
+
+# Firebase Authentication 설정 (6.3)
 
 - Firebase란? BAAS(Backend as a service), 서버리스 서비스
 - 사용방법

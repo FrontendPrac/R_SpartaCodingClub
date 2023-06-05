@@ -7,6 +7,7 @@ import XMLhttp from "./pages/XMLhttps";
 import Fetch from "./pages/Fetch";
 import Axios from "./pages/Axios";
 import HomeworkAPI from "./pages/HomeworkAPI";
+import Signup from "./pages/SIgnup";
 
 function App() {
   const [listTIL, setListTIL] = useState([]);
@@ -22,6 +23,7 @@ function App() {
         <Route path="/fetch" element={<Fetch />} />
         <Route path="/axios" element={<Axios />} />
         <Route path="/homework-api" element={<HomeworkAPI />} />
+        <Route path="/signup" element={<Signup />} />
         <Route path="/myself/:index" element={<Myself />} /> {/* 동적 라우팅 */}
       </Routes>
     </div>
