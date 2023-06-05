@@ -18,6 +18,7 @@ const Signup = () => {
     );
     console.log("user: ", user);
 
+    // 유저 정보 저장하기
     const user_doc = await addDoc(collection(db, "users"), {
       name: name_ref.current.value,
       email: user.user.email,

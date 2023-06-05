@@ -3,10 +3,14 @@
 - Authentication
   - 랜덤으로 id값을 할당한다.
   - 회원가입 : `createUserWithEmailAndPassword`
+  - 로그인 : `signInWithEmailAndPassword`
+  - 로그인 상태 확인 : `onAuthStateChanged`
+  - 로그아웃 : `signOut`
 - Firestore
   - id를 지정하지 않으면 랜덤으로 id값을 할당한다.
   - `collection`
   - 추가 : `addDoc`
+  - 조회 : `getDocs`
 
 # Firebase Authentication 설정 (6.3)
 
