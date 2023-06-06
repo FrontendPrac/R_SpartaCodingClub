@@ -1,3 +1,38 @@
+# Error Handling (6.6)
+
+1. try-catch-finally
+
+- 특징 : run-time 에러만 잡는 것이고, parse-time 에러는 못잡는다.
+- try : 코드 실행
+- catch : try문에서 에러가 났을 경우 실행
+- finally : try문 에러와 상관없이 무조건 실행
+
+2.  자바스크립트 에러 객체
+
+- 표준 에러 객체 :Error, SyntaxError, ReferenceError, TypeError, RangeError, NetworkError, DOMException
+- 특징
+  - 에러 객체는 기본적인 프로퍼티로 name과 message를 가진다.
+  - 에러 객체를 생성할때 별도의 프로퍼티를 지정하지 않는다면 name과 message는 같은 값으로 들어간다.
+- 문법
+  - 에러 객체 만들고 던지기
+    ```
+    try {
+      if (data.age !== 28) {
+        const age_error = new Error("기동이 나이가 틀렸어요");
+        throw age_error;
+      }
+    }
+    ```
+  - 에러 객체 받기
+    ```
+    catch (err) {
+      console.log(err);
+    }
+    ```
+- 에러 객체 핸들링
+  - try문에서 에러 객체를 던지면 catch문에서 에러를 받는다.
+  - catch문에서 에러 객체를 던지면 바깥의 try-catch문에서 에러를 받는다.
+
 # Firebase (6.6)
 
 - Storage

@@ -14,12 +14,13 @@ import { onAuthStateChanged } from "firebase/auth";
 import LoginSuccess from "./pages/LoginSuccess";
 import Storage from "./pages/Storage";
 import HomeworkTIL from "./pages/HomeworkTIL";
+import TryCatchFinallyError from "./pages/TryCatchFinallyError";
 
 function App() {
   const [listTIL, setListTIL] = useState([]);
   const [isLogin, setIsLogin] = useState(false); // 로그인 상태 관리
 
-  console.log("auth.currentUser: ", auth.currentUser);
+  // console.log("auth.currentUser: ", auth.currentUser);
 
   // 로그인 상태 확인
   const loginCheck = async (user) => {
@@ -33,7 +34,6 @@ function App() {
   // 로그인 상태 감지
   useEffect(() => {
     onAuthStateChanged(auth, loginCheck);
-    
   }, []);
 
   return (
@@ -56,6 +56,10 @@ function App() {
         )}
         <Route path="/storage" element={<Storage />} />
         <Route path="/homework-til" element={<HomeworkTIL />} />
+        <Route
+          path="/try-catch-finally-error"
+          element={<TryCatchFinallyError />}
+        />
         <Route path="/myself/:index" element={<Myself />} /> {/* 동적 라우팅 */}
       </Routes>
     </div>
