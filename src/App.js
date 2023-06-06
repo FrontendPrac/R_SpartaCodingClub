@@ -13,6 +13,7 @@ import { auth } from "./shared/firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import LoginSuccess from "./pages/LoginSuccess";
 import Storage from "./pages/Storage";
+import HomeworkTIL from "./pages/HomeworkTIL";
 
 function App() {
   const [listTIL, setListTIL] = useState([]);
@@ -32,6 +33,7 @@ function App() {
   // 로그인 상태 감지
   useEffect(() => {
     onAuthStateChanged(auth, loginCheck);
+    
   }, []);
 
   return (
@@ -53,6 +55,7 @@ function App() {
           <Route path="/login" element={<Login />} />
         )}
         <Route path="/storage" element={<Storage />} />
+        <Route path="/homework-til" element={<HomeworkTIL />} />
         <Route path="/myself/:index" element={<Myself />} /> {/* 동적 라우팅 */}
       </Routes>
     </div>
