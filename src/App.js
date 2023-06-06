@@ -12,6 +12,7 @@ import Login from "./pages/Login";
 import { auth } from "./shared/firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import LoginSuccess from "./pages/LoginSuccess";
+import Storage from "./pages/Storage";
 
 function App() {
   const [listTIL, setListTIL] = useState([]);
@@ -51,6 +52,7 @@ function App() {
         ) : (
           <Route path="/login" element={<Login />} />
         )}
+        <Route path="/storage" element={<Storage />} />
         <Route path="/myself/:index" element={<Myself />} /> {/* 동적 라우팅 */}
       </Routes>
     </div>

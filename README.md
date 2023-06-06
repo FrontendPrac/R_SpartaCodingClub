@@ -1,3 +1,10 @@
+# Firebase (6.6)
+
+- Storage
+  - 경로 설정 : `ref`
+  - 파일 업로드 : `uploadBytes`
+  - URL 다운로드 : `getDownloadURL`
+
 # Firebase (6.5)
 
 - Authentication
@@ -8,7 +15,7 @@
   - 로그아웃 : `signOut`
 - Firestore
   - id를 지정하지 않으면 랜덤으로 id값을 할당한다.
-  - `collection`
+  - 경로 설정 : `collection`
   - 추가 : `addDoc`
   - 조회 : `getDocs`
 
